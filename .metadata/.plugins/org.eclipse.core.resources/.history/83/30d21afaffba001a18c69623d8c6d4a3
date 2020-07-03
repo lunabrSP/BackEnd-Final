@@ -1,0 +1,17 @@
+package br.com.isidrocorp.projeto.dao;
+
+import java.util.ArrayList;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
+
+import br.com.isidrocorp.projeto.dto.AgenteHeaders;
+import br.com.isidrocorp.projeto.model.Transacao;
+
+public interface AgentesDAO extends CrudRepository<Transacao, Integer>{
+	@Query("SELECT new br.com.isidrocorp.projeto.dto.Contadores(t.id_agente, t.nome_agente) FROM Transacao t ORDER BY t.nome_agente")
+	public ArrayList<AgenteHeaders> g;
+	
+}
+

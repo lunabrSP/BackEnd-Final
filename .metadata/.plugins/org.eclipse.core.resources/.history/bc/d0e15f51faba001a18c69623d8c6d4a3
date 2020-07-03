@@ -1,0 +1,13 @@
+package br.com.isidrocorp.projeto.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "")
+
+public class Agente {
+	
+	select id_agente, nome_agente from MTB310_ag_financeiro;
+
+}

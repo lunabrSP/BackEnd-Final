@@ -1,0 +1,5 @@
+package br.com.isidrocorp.projeto.model;
+
+public class Agente {
+
+}

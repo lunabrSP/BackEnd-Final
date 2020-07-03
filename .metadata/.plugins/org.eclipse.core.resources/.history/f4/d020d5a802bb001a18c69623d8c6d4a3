@@ -1,0 +1,15 @@
+package br.com.isidrocorp.projeto.dao;
+
+import java.util.ArrayList;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+import br.com.isidrocorp.projeto.dto.AgenteHeaders;
+
+public interface AgentesDAO extends CrudRepository<AgenteHeaders, Integer>{
+	@Query("SELECT new br.com.isidrocorp.projeto.dto.AgenteHeaders(ah.id_agente, ah.nome_agente) FROM AgenteHeaders ah ORDER BY ah.nome_agente")
+	public ArrayList<AgenteHeaders> getNomes();
+	
+}
+

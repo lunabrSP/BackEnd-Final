@@ -1,0 +1,26 @@
+package br.com.isidrocorp.projeto.dto;
+
+public class AgenteHeaders {
+
+	public int idAgente;
+	public String nomeAgente;
+	
+	public AgenteHeaders(int idAgente, String nomeAgente) {
+		super();
+		this.idAgente = idAgente;
+		this.nomeAgente = nomeAgente;
+	}
+	public int getIdAgente() {
+		return idAgente;
+	}
+	public void setIdAgente(int idAgente) {
+		this.idAgente = idAgente;
+	}
+	public String getNomeAgente() {
+		return nomeAgente;
+	}
+	public void setNomeAgente(String nomeAgente) {
+		this.nomeAgente = nomeAgente;
+	}
+	
+}
